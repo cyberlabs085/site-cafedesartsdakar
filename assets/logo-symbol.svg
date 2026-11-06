@@ -1,0 +1,46 @@
+<svg width="512" height="512" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CAFÉ DES ARTS DAKAR Symbol Transparent">
+  <title>CAFÉ DES ARTS DAKAR — Symbol Mark (Transparent)</title>
+  
+    <defs>
+      <linearGradient id="brandGrad_y5itww" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#E5C365"/>
+        <stop offset="50%" stop-color="#C9A84C"/>
+        <stop offset="100%" stop-color="#047857"/>
+      </linearGradient>
+      <linearGradient id="brandGrad_y5itww_accent" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#E5C365"/>
+      </linearGradient>
+      <linearGradient id="brandGrad_y5itww_glow" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#E5C365" stop-opacity="0.2"/>
+      </linearGradient>
+    </defs>
+  
+  <g id="symbol-mark">
+    
+        <path fill="url(#brandGrad_y5itww)" fill-rule="evenodd" d="
+          M 128 34
+          C 132 34, 136 37, 138 41
+          L 220 208
+          C 222 213, 219 220, 213 220
+          L 174 220
+          C 170 220, 166 217, 164 213
+          L 148 174
+          L 108 174
+          L 92 213
+          C 90 217, 86 220, 82 220
+          L 43 220
+          C 37 220, 34 213, 36 208
+          L 118 41
+          C 120 37, 124 34, 128 34
+          Z
+          M 128 92
+          L 140 138
+          L 116 138
+          Z
+        "/>
+        <polygon points="128,34 150,84 106,84" fill="url(#brandGrad_y5itww_accent)"/>
+      
+  </g>
+</svg>

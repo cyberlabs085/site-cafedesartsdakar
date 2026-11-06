@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth" data-type="place">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-type" content="place">
+  <meta name="site-kind" content="place">
+  <title>Café des Arts Dakar — L'éveil des sens entre horizon marin et grains d'exception.</title>
+  <meta name="description" content="Découvrez une torréfaction artisanale dans un cadre apaisant face à l'Océan Atlantique. Une escale gastronomique où chaque tasse raconte l'histoire de nos terroirs sélectionnés.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #F9F7F2;
+      color: #404040;
+      overflow-x: hidden;
+    }
+    .font-title-custom { font-family: 'Playfair Display', serif; }
+    .font-mono-custom { font-family: 'JetBrains Mono', monospace; }
+    .card-3d {
+      transform-style: preserve-3d;
+      will-change: transform;
+      transition: transform 0.15s ease-out, box-shadow 0.25s ease-out;
+    }
+  </style>
+</head>
+<body class="selection:bg-amber-800 selection:text-white relative">
+
+  <!-- ================= NAVBAR ÉLÉGANTE PLEINE LARGEUR (SPÉCIFIQUE AUX LIEUX & CAFÉS) ================= -->
+  <header class="sticky top-0 z-50 backdrop-blur-md border-b transition-all duration-300" style="background: rgba(251, 248, 243, 0.95); border-color: rgba(74, 46, 27, 0.14);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3.5">
+        <div class="w-10 h-10 flex items-center justify-center p-1.5 rounded-xl shadow-sm overflow-hidden" style="background: #FFFFFF; border: 1px solid rgba(74, 46, 27, 0.14);">
+          <div class="w-full h-full flex items-center justify-center"><svg width="512" height="512" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CAFÉ DES ARTS DAKAR Symbol Transparent">
+  <title>CAFÉ DES ARTS DAKAR — Symbol Mark (Transparent)</title>
+  
+    <defs>
+      <linearGradient id="brandGrad_y5itww" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#E5C365"/>
+        <stop offset="50%" stop-color="#C9A84C"/>
+        <stop offset="100%" stop-color="#047857"/>
+      </linearGradient>
+      <linearGradient id="brandGrad_y5itww_accent" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#E5C365"/>
+      </linearGradient>
+      <linearGradient id="brandGrad_y5itww_glow" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#E5C365" stop-opacity="0.2"/>
+      </linearGradient>
+    </defs>
+  
+  <g id="symbol-mark">
+    
+        <path fill="url(#brandGrad_y5itww)" fill-rule="evenodd" d="
+          M 128 34
+          C 132 34, 136 37, 138 41
+          L 220 208
+          C 222 213, 219 220, 213 220
+          L 174 220
+          C 170 220, 166 217, 164 213
+          L 148 174
+          L 108 174
+          L 92 213
+          C 90 217, 86 220, 82 220
+          L 43 220
+          C 37 220, 34 213, 36 208
+          L 118 41
+          C 120 37, 124 34, 128 34
+          Z
+          M 128 92
+          L 140 138
+          L 116 138
+          Z
+        "/>
+        <polygon points="128,34 150,84 106,84" fill="url(#brandGrad_y5itww_accent)"/>
+      
+  </g>
+</svg></div>
+        </div>
+        <div>
+          <span class="font-extrabold text-base sm:text-lg tracking-tight block" style="color: #1A1A1A;">Café des Arts Dakar</span>
+          <span class="text-[11px] font-mono-custom hidden sm:block" style="color: #8C7A70;">📍 Almadies Corniche, Dakar</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-bold" style="color: #8C7A70;">
+        <a href="#atmosphere" class="hover:opacity-75 transition-opacity">L'Atmosphère</a>
+        <a href="#carte" class="hover:opacity-75 transition-opacity">La Carte Gourmande</a>
+        <a href="#histoire" class="hover:opacity-75 transition-opacity">Notre Histoire</a>
+        <a href="#horaires" class="hover:opacity-75 transition-opacity">Horaires &amp; Accès</a>
+        <a href="#avis" class="hover:opacity-75 transition-opacity">Avis</a>
+        <a href="#contact" class="hover:opacity-75 transition-opacity">Contact</a>
+      </nav>
+
+      <a href="https://wa.me/221778690584?text=Bonjour%20Caf%C3%A9%20des%20Arts%20Dakar,%20je%20souhaite%20r%C3%A9server%20une%20table." target="_blank" class="px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center space-x-2 hover:scale-105" style="background: #4A3728; color: #FBF8F3;">
+        <span>Réserver une Table</span>
+        <span>→</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= HERO HOSPITALITÉ CHALEUREUX (TASTE-SKILL PLACE) ================= -->
+  <section class="relative min-h-[88vh] flex items-center pt-16 pb-20 px-4 sm:px-8 max-w-7xl mx-auto overflow-hidden">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+      <div class="lg:col-span-7 flex flex-col items-start text-left z-10">
+        <div class="hero-anim inline-flex items-center space-x-2.5 px-4 py-2 rounded-full text-xs font-mono-custom font-bold uppercase tracking-wider mb-6 shadow-sm" style="background: rgba(74, 46, 27, 0.08); border: 1px solid rgba(74, 46, 27, 0.14); color: #4A3728;">
+          <span>☕ Torréfaction Artisanale & Cafés d'Origine • Dakar Corniche</span>
+        </div>
+
+        <h1 class="hero-anim text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.08] mb-6" style="color: #1A1A1A;">
+          Café des Arts Dakar
+          <span class="block font-title-custom italic font-normal text-3xl sm:text-5xl mt-2" style="color: #C5A059;">
+            L'éveil des sens entre horizon marin et grains d'exception.
+          </span>
+        </h1>
+
+        <p class="hero-anim text-base sm:text-lg max-w-xl font-light leading-relaxed mb-6" style="color: #404040;">
+          Découvrez une torréfaction artisanale dans un cadre apaisant face à l'Océan Atlantique. Une escale gastronomique où chaque tasse raconte l'histoire de nos terroirs sélectionnés.
+        </p>
+
+        <div class="hero-anim inline-flex items-center space-x-2 px-4 py-2 rounded-xl text-xs font-mono-custom mb-8 shadow-sm" style="background: #FFFFFF; border: 1px solid rgba(74, 46, 27, 0.14); color: #4A3728;">
+          <span>⏰</span>
+          <span class="font-bold">Ouvert 7j/7 • 08h00 - 23h00</span>
+          <span class="text-neutral-400">•</span>
+          <span>Accès direct Almadies</span>
+        </div>
+
+        <div class="hero-anim flex flex-col sm:flex-row items-center space-y-3.5 sm:space-y-0 sm:space-x-5 w-full sm:w-auto">
+          <a href="https://wa.me/221778690584?text=Bonjour%20Caf%C3%A9%20des%20Arts%20Dakar,%20je%20souhaite%20r%C3%A9server%20ou%20commander." target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-full font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center justify-center space-x-2.5 hover:scale-105" style="background: #4A3728; color: #FBF8F3;">
+            <span>Commander sur WhatsApp</span>
+            <span>💬</span>
+          </a>
+          <a href="#carte" class="w-full sm:w-auto px-7 py-4 rounded-full font-bold text-xs uppercase tracking-wider transition-all border text-center shadow-sm hover:shadow" style="border-color: rgba(74, 46, 27, 0.14); color: #1A1A1A; background: #FFFFFF;">
+            Consulter la Carte Gourmande ↓
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 relative flex justify-center z-10 hero-anim">
+        <div class="card-3d relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl" style="border: 1px solid rgba(74, 46, 27, 0.14); box-shadow: 0 10px 30px -10px rgba(74, 46, 27, 0.08);; transform-style: preserve-3d;">
+          <div class="card-glare absolute inset-0 pointer-events-none rounded-[inherit] opacity-0 transition-opacity duration-200 z-30"></div>
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1400&q=85" alt="Café des Arts Dakar" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" style="transform: translateZ(10px);" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          
+          <div class="absolute bottom-5 inset-x-5 p-4 rounded-2xl backdrop-blur-xl shadow-2xl flex items-center justify-between z-20" style="background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(74, 46, 27, 0.14); transform: translateZ(35px);">
+            <div>
+              <div class="text-xs font-mono-custom font-bold" style="color: #4A3728;">☕ Torréfaction Artisanale</div>
+              <div class="text-sm font-extrabold tracking-tight" style="color: #1A1A1A;">Grains Purs d'Afrique • Dakar</div>
+            </div>
+            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold text-white bg-amber-800">Frais</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 01 : LE CADRE & L'ATMOSPHÈRE ================= -->
+  <section id="atmosphere" class="py-16 sm:py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t" style="border-color: rgba(74, 46, 27, 0.14);">
+    <div class="text-center mb-14">
+      <div class="text-xs font-mono-custom font-bold uppercase tracking-widest mb-3" style="color: #4A3728;">UN HAVRE DE PAIX AUX ALMADIES</div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" style="color: #1A1A1A;">L'Atmosphère &amp; Le Lieu</h2>
+      <p class="text-sm sm:text-base mt-3 max-w-xl mx-auto font-light" style="color: #8C7A70;">Découvrez nos espaces conçus pour vos moments de travail, de détente ou de partage.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+    <div class="relative rounded-2xl overflow-hidden shadow-lg group flex flex-col justify-end min-h-[360px] p-6 text-white border" style="border-color: rgba(74, 46, 27, 0.14);">
+      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80" alt="L'Espace Café & Coworking" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
+      <div class="relative z-10">
+        <h3 class="text-xl font-bold tracking-tight mb-2">L'Espace Café & Coworking</h3>
+        <p class="text-sm text-gray-200 font-light leading-relaxed">Wi-Fi haut débit, lumière naturelle et atmosphère studieuse et feutrée.</p>
+      </div>
+    </div>
+  
+
+    <div class="relative rounded-2xl overflow-hidden shadow-lg group flex flex-col justify-end min-h-[360px] p-6 text-white border" style="border-color: rgba(74, 46, 27, 0.14);">
+      <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="La Terrasse face à l'Océan" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
+      <div class="relative z-10">
+        <h3 class="text-xl font-bold tracking-tight mb-2">La Terrasse face à l'Océan</h3>
+        <p class="text-sm text-gray-200 font-light leading-relaxed">Bise marine des Almadies, coin ombragé et calme absolu pour vos pauses.</p>
+      </div>
+    </div>
+  
+
+    <div class="relative rounded-2xl overflow-hidden shadow-lg group flex flex-col justify-end min-h-[360px] p-6 text-white border" style="border-color: rgba(74, 46, 27, 0.14);">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Le Comptoir du Barista" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
+      <div class="relative z-10">
+        <h3 class="text-xl font-bold tracking-tight mb-2">Le Comptoir du Barista</h3>
+        <p class="text-sm text-gray-200 font-light leading-relaxed">Extraction précise à la machine expresso et méthodes douces V60 & Chemex.</p>
+      </div>
+    </div>
+  
+    </div>
+  </section>
+
+  <!-- ================= SECTION 02 : LA CARTE GOURMANDE & SPÉCIALITÉS ================= -->
+  <section id="carte" class="py-16 sm:py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t" style="border-color: rgba(74, 46, 27, 0.14);">
+    <div class="text-center mb-14">
+      <div class="text-xs font-mono-custom font-bold uppercase tracking-widest mb-3" style="color: #4A3728;">SÉLECTION SIGNATURE</div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" style="color: #1A1A1A;">La Carte du Barista</h2>
+      <p class="text-sm sm:text-base mt-3 max-w-xl mx-auto font-light" style="color: #8C7A70;">Cafés extraits avec précision, douceurs maison et boissons fraîches préparées à la minute.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div class="card-3d group relative rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 shadow-md" style="background: #FFFFFF; border: 1px solid rgba(74, 46, 27, 0.14); transform-style: preserve-3d;">
+        <div class="card-glare absolute inset-0 pointer-events-none rounded-[inherit] opacity-0 transition-opacity duration-200 z-30"></div>
+        <div class="relative w-full h-56 overflow-hidden" style="transform: translateZ(15px);">
+          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Signature Latte" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" />
+          <span class="absolute top-4 right-4 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold shadow-lg" style="background: #4A3728; color: #FBF8F3;">
+            3 500 FCFA
+          </span>
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-1 relative z-10" style="transform: translateZ(20px);">
+          <div>
+            <h3 class="text-xl font-bold tracking-tight mb-2" style="color: #1A1A1A;">Signature Latte</h3>
+            <p class="text-sm mb-6 leading-relaxed font-light" style="color: #404040;">Espresso double, lait velouté et touche de noisette torréfiée</p>
+          </div>
+          <a href="https://wa.me/221778690584?text=Bonjour%20Caf%C3%A9%20des%20Arts%20Dakar,%20je%20souhaite%20commander%20:%20Signature%20Latte%20(3%20500%20FCFA)" target="_blank" class="w-full py-3.5 rounded-full font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center space-x-2 transition-all hover:scale-[1.02] shadow-sm" style="background: #4A3728; color: #FBF8F3;">
+            <span>Commander sur WhatsApp</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    
+
+      <div class="card-3d group relative rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 shadow-md" style="background: #FFFFFF; border: 1px solid rgba(74, 46, 27, 0.14); transform-style: preserve-3d;">
+        <div class="card-glare absolute inset-0 pointer-events-none rounded-[inherit] opacity-0 transition-opacity duration-200 z-30"></div>
+        <div class="relative w-full h-56 overflow-hidden" style="transform: translateZ(15px);">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" alt="Brunch Almadies" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" />
+          <span class="absolute top-4 right-4 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold shadow-lg" style="background: #4A3728; color: #FBF8F3;">
+            8 500 FCFA
+          </span>
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-1 relative z-10" style="transform: translateZ(20px);">
+          <div>
+            <h3 class="text-xl font-bold tracking-tight mb-2" style="color: #1A1A1A;">Brunch Almadies</h3>
+            <p class="text-sm mb-6 leading-relaxed font-light" style="color: #404040;">Œufs Bénédicte, avocado toast et pâtisserie maison du jour</p>
+          </div>
+          <a href="https://wa.me/221778690584?text=Bonjour%20Caf%C3%A9%20des%20Arts%20Dakar,%20je%20souhaite%20commander%20:%20Brunch%20Almadies%20(8%20500%20FCFA)" target="_blank" class="w-full py-3.5 rounded-full font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center space-x-2 transition-all hover:scale-[1.02] shadow-sm" style="background: #4A3728; color: #FBF8F3;">
+            <span>Commander sur WhatsApp</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    
+
+      <div class="card-3d group relative rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 shadow-md" style="background: #FFFFFF; border: 1px solid rgba(74, 46, 27, 0.14); transform-style: preserve-3d;">
+        <div class="card-glare absolute inset-0 pointer-events-none rounded-[inherit] opacity-0 transition-opacity duration-200 z-30"></div>
+        <div class="relative w-full h-56 overflow-hidden" style="transform: translateZ(15px);">
+          <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80" alt="Single Origin V60" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" />
+          <span class="absolute top-4 right-4 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold shadow-lg" style="background: #4A3728; color: #FBF8F3;">
+            4 000 FCFA
+          </span>
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-1 relative z-10" style="transform: translateZ(20px);">
+          <div>
+            <h3 class="text-xl font-bold tracking-tight mb-2" style="color: #1A1A1A;">Single Origin V60</h3>
+            <p class="text-sm mb-6 leading-relaxed font-light" style="color: #404040;">Méthode douce révélant les notes florales de nos crus éthiopiens</p>
+          </div>
+          <a href="https://wa.me/221778690584?text=Bonjour%20Caf%C3%A9%20des%20Arts%20Dakar,%20je%20souhaite%20commander%20:%20Single%20Origin%20V60%20(4%20000%20FCFA)" target="_blank" class="w-full py-3.5 rounded-full font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center space-x-2 transition-all hover:scale-[1.02] shadow-sm" style="background: #4A3728; color: #FBF8F3;">
+            <span>Commander sur WhatsApp</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    
+
+      <div class="card-3d group relative rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 shadow-md" style="background: #FFFFFF; border: 1px solid rgba(74, 46, 27, 0.14); transform-style: preserve-3d;">
+        <div class="card-glare absolute inset-0 pointer-events-none rounded-[inherit] opacity-0 transition-opacity duration-200 z-30"></div>
+        <div class="relative w-full h-56 overflow-hidden" style="transform: translateZ(15px);">
+          <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="Tartelette Citron-Basilic" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" />
+          <span class="absolute top-4 right-4 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold shadow-lg" style="background: #4A3728; color: #FBF8F3;">
+            2 800 FCFA
+          </span>
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-1 relative z-10" style="transform: translateZ(20px);">
+          <div>
+            <h3 class="text-xl font-bold tracking-tight mb-2" style="color: #1A1A1A;">Tartelette Citron-Basilic</h3>
+            <p class="text-sm mb-6 leading-relaxed font-light" style="color: #404040;">Création pâtissière signature pour accompagner vos boissons</p>
+          </div>
+          <a href="https://wa.me/221778690584?text=Bonjour%20Caf%C3%A9%20des%20Arts%20Dakar,%20je%20souhaite%20commander%20:%20Tartelette%20Citron-Basilic%20(2%20800%20FCFA)" target="_blank" class="w-full py-3.5 rounded-full font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center space-x-2 transition-all hover:scale-[1.02] shadow-sm" style="background: #4A3728; color: #FBF8F3;">
+            <span>Commander sur WhatsApp</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    
+    </div>
+  </section>
+
+  <!-- ================= SECTION 03 : HISTOIRE & TERROIRS ================= -->
+  <section id="histoire" class="py-16 sm:py-24 px-4 sm:px-8 max-w-6xl mx-auto border-t" style="border-color: rgba(74, 46, 27, 0.14);">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5 relative flex justify-center">
+        <div class="card-3d relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl" style="border: 1px solid rgba(74, 46, 27, 0.14); box-shadow: 0 10px 30px -10px rgba(74, 46, 27, 0.08);; transform-style: preserve-3d;">
+          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1000&q=80" alt="Barista Café des Arts Dakar" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          <div class="absolute bottom-5 inset-x-5 p-4 rounded-2xl backdrop-blur-xl shadow-2xl flex items-center justify-between z-20" style="background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(74, 46, 27, 0.14);">
+            <div>
+              <div class="text-xs font-mono-custom font-bold" style="color: #4A3728;">Variétés de crus artisanaux</div>
+              <div class="text-lg font-extrabold tracking-tight" style="color: #1A1A1A;">+50</div>
+            </div>
+            <span class="text-amber-800 text-lg">★</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 flex flex-col items-start text-left">
+        <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full text-xs font-mono-custom font-bold uppercase tracking-wider mb-4 shadow-sm" style="background: rgba(74, 46, 27, 0.08); border: 1px solid rgba(74, 46, 27, 0.14); color: #4A3728;">
+          <span>NOTRE HISTOIRE &amp; PASSION</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4" style="color: #1A1A1A;">
+          L'Art de la Torréfaction
+        </h2>
+        <div class="text-base font-title-custom italic mb-6" style="color: #C5A059;">
+          Une invitation à la contemplation
+        </div>
+        <p class="text-base font-light leading-relaxed mb-4" style="color: #404040;">
+          Au Café des Arts, nous considérons le café comme une œuvre vivante. Chaque grain est rigoureusement sélectionné pour sa pureté avant d'être torréfié sur place selon une méthode artisanale exigeante.
+        </p>
+        <p class="text-base font-light leading-relaxed mb-8" style="color: #404040;">
+          Face au tumulte des vagues, nous offrons un refuge de sérénité. Que ce soit pour un brunch dominical ou une pause caféinée, notre équipe veille à ce que chaque détail sublime votre expérience.
+        </p>
+
+        <!-- Manifeste de Métier Propre au Lieu (Zéro copié-collé d'agence) -->
+        <blockquote class="p-6 rounded-2xl border mb-8 italic text-sm leading-relaxed" style="background: #FFFFFF; border-color: rgba(74, 46, 27, 0.14); color: #1A1A1A;">
+          « La plupart des établissements se contentent de Un café standard servi mécaniquement sans attention au détail.<br/><br/>
+          <strong class="font-normal font-title-custom not-italic text-base sm:text-lg block" style="color: #4A3728;">Notre obsession : La quête de la tasse parfaite, sculptée par l'expertise du grain et le calme de l'océan.</strong> »
+        </blockquote>
+
+        <a href="https://wa.me/221778690584?text=Bonjour%20Caf%C3%A9%20des%20Arts%20Dakar,%20je%20souhaite%20en%20savoir%20plus." target="_blank" class="px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center space-x-2 hover:scale-105" style="background: #4A3728; color: #FBF8F3;">
+          <span>Échanger avec Nous sur WhatsApp</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 04 : HORAIRES D'OUVERTURE & ACCÈS PRATIQUE ================= -->
+  <section id="horaires" class="py-16 sm:py-24 px-4 sm:px-8 max-w-6xl mx-auto border-t" style="border-color: rgba(74, 46, 27, 0.14);">
+    <div class="text-center mb-14">
+      <div class="text-xs font-mono-custom font-bold uppercase tracking-widest mb-3" style="color: #4A3728;">INFOS PRATIQUES</div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" style="color: #1A1A1A;">Horaires d'Ouverture &amp; Accès</h2>
+      <p class="text-sm sm:text-base mt-3 max-w-xl mx-auto font-light" style="color: #8C7A70;">Nous vous accueillons tous les jours aux Almadies dans un cadre agréable et climatisé.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="p-8 rounded-2xl shadow-sm border text-left" style="background: #FFFFFF; border-color: rgba(74, 46, 27, 0.14);">
+        <div class="text-3xl mb-4">⏰</div>
+        <h3 class="text-lg font-bold mb-3" style="color: #1A1A1A;">Horaires du Service</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color: #404040;">Ouvert 7j/7 • 08h00 - 23h00</p>
+        <span class="text-xs font-mono-custom font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">Service Continu</span>
+      </div>
+
+      <div class="p-8 rounded-2xl shadow-sm border text-left" style="background: #FFFFFF; border-color: rgba(74, 46, 27, 0.14);">
+        <div class="text-3xl mb-4">📍</div>
+        <h3 class="text-lg font-bold mb-3" style="color: #1A1A1A;">Adresse &amp; Cadre</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color: #404040;">Almadies Corniche, Dakar</p>
+        <span class="text-xs font-mono-custom font-bold" style="color: #4A3728;">Face à l'Océan Atlantique</span>
+      </div>
+
+      <div class="p-8 rounded-2xl shadow-sm border text-left" style="background: #FFFFFF; border-color: rgba(74, 46, 27, 0.14);">
+        <div class="text-3xl mb-4">💳</div>
+        <h3 class="text-lg font-bold mb-3" style="color: #1A1A1A;">Règlement Simplifié</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color: #404040;">Wave, Orange Money, Cartes Bancaires (Visa/Mastercard) et Espèces acceptés sans frais.</p>
+        <span class="text-xs font-mono-custom font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full">Wave &amp; OM Instantané</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 05 : AVIS CLIENTS & HÔTES ================= -->
+  <section id="avis" class="py-16 sm:py-24 px-4 sm:px-8 max-w-5xl mx-auto border-t" style="border-color: rgba(74, 46, 27, 0.14);">
+    <div class="text-center mb-14">
+      <div class="text-xs font-mono-custom font-bold uppercase tracking-widest mb-3" style="color: #4A3728;">TÉMOIGNAGES DE NOS HÔTES</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" style="color: #1A1A1A;">La Parole à Nos Fidèles Clients</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+    <div class="p-8 rounded-2xl shadow-sm border flex flex-col justify-between" style="background: #FFFFFF; border-color: rgba(74, 46, 27, 0.14);">
+      <div>
+        <div class="text-amber-500 mb-4 text-sm tracking-widest">★★★★★</div>
+        <p class="text-base italic mb-6 leading-relaxed font-light" style="color: #404040;">"Le seul endroit à Dakar où le café est traité avec autant de respect. Une pépite aux Almadies."</p>
+      </div>
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs" style="background: #4A3728; color: #FBF8F3;">
+          S
+        </div>
+        <div>
+          <div class="font-bold text-sm" style="color: #1A1A1A;">Sophie M.</div>
+          <div class="text-xs" style="color: #8C7A70;">Habitué Dakar</div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="p-8 rounded-2xl shadow-sm border flex flex-col justify-between" style="background: #FFFFFF; border-color: rgba(74, 46, 27, 0.14);">
+      <div>
+        <div class="text-amber-500 mb-4 text-sm tracking-widest">★★★★★</div>
+        <p class="text-base italic mb-6 leading-relaxed font-light" style="color: #404040;">"La vue, le calme, et ce latte onctueux... Un moment de pur bonheur."</p>
+      </div>
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs" style="background: #4A3728; color: #FBF8F3;">
+          M
+        </div>
+        <div>
+          <div class="font-bold text-sm" style="color: #1A1A1A;">Marc T.</div>
+          <div class="text-xs" style="color: #8C7A70;">Visiteur</div>
+        </div>
+      </div>
+    </div>
+  
+    </div>
+  </section>
+
+  <!-- ================= SECTION 06 : FAQ PRATIQUE DU LIEU ================= -->
+  <section id="faq" class="py-16 sm:py-24 px-4 sm:px-8 max-w-4xl mx-auto border-t" style="border-color: rgba(74, 46, 27, 0.14);">
+    <div class="text-center mb-14">
+      <div class="text-xs font-mono-custom font-bold uppercase tracking-widest mb-3" style="color: #4A3728;">QUESTIONS FRÉQUENTES</div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" style="color: #1A1A1A;">FAQ Pratique du Café</h2>
+    </div>
+
+    <div class="space-y-4">
+      
+    <div class="faq-item rounded-2xl overflow-hidden transition-all duration-300 shadow-sm" style="background: #FFFFFF; border: 1px solid rgba(74, 46, 27, 0.14);">
+      <button class="faq-trigger w-full px-6 py-5 text-left font-bold text-base flex items-center justify-between transition-colors" style="color: #1A1A1A;">
+        <span>Proposez-vous des options végétaliennes ?</span>
+        <span class="faq-icon text-xl font-mono transition-transform duration-300" style="color: #4A3728;">+</span>
+      </button>
+      <div class="faq-answer px-6 pb-6 text-sm font-light leading-relaxed hidden" style="color: #404040;">
+        Oui, nous offrons une sélection de laits végétaux et de pâtisseries sans produits laitiers.
+      </div>
+    </div>
+  
+
+    <div class="faq-item rounded-2xl overflow-hidden transition-all duration-300 shadow-sm" style="background: #FFFFFF; border: 1px solid rgba(74, 46, 27, 0.14);">
+      <button class="faq-trigger w-full px-6 py-5 text-left font-bold text-base flex items-center justify-between transition-colors" style="color: #1A1A1A;">
+        <span>Est-il possible de réserver une table ?</span>
+        <span class="faq-icon text-xl font-mono transition-transform duration-300" style="color: #4A3728;">+</span>
+      </button>
+      <div class="faq-answer px-6 pb-6 text-sm font-light leading-relaxed hidden" style="color: #404040;">
+        Nous acceptons les réservations par téléphone pour vos brunchs de groupe le week-end.
+      </div>
+    </div>
+  
+    </div>
+  </section>
+
+  <!-- ================= SECTION 07 : RÉSERVATION DE TABLE & CONTACT DIRECT ================= -->
+  <section id="contact" class="py-16 sm:py-24 px-4 sm:px-8 max-w-5xl mx-auto border-t" style="border-color: rgba(74, 46, 27, 0.14);">
+    <div class="p-10 sm:p-14 rounded-2xl shadow-2xl relative overflow-hidden border" style="background: #FFFFFF; border-color: rgba(74, 46, 27, 0.14);">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+        <div class="md:col-span-8 text-left">
+          <div class="text-xs font-mono-custom font-bold uppercase tracking-widest mb-3" style="color: #4A3728;">ACCUEIL VIP &amp; TABLES</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4" style="color: #1A1A1A;">Une Table Vous Attend aux Almadies</h2>
+          <p class="text-sm font-light leading-relaxed mb-6" style="color: #404040;">
+            Pour un petit-déjeuner face à la mer, un rendez-vous d'affaires ou une pause gourmande entre amis, notre équipe vous réserve le meilleur accueil.
+          </p>
+          <div class="space-y-2 text-xs font-mono-custom mb-8" style="color: #8C7A70;">
+            <div>📍 Adresse : <strong style="color: #1A1A1A;">Almadies Corniche, Dakar</strong></div>
+            <div>⏰ Horaires : <strong style="color: #1A1A1A;">Ouvert 7j/7 • 08h00 - 23h00</strong></div>
+            <div>📞 Téléphone / WhatsApp : <strong style="color: #4A3728;">+221 77 869 05 84</strong></div>
+          </div>
+          <a href="https://wa.me/221778690584?text=Bonjour%20Caf%C3%A9%20des%20Arts%20Dakar,%20je%20souhaite%20r%C3%A9server%20une%20table." target="_blank" class="inline-flex items-center space-x-2.5 px-8 py-4 rounded-full font-bold text-xs uppercase tracking-wider shadow-lg hover:scale-105 transition-all" style="background: #4A3728; color: #FBF8F3;">
+            <span>Réserver Instantanément sur WhatsApp</span>
+            <span>💬</span>
+          </a>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col items-center justify-center p-8 rounded-3xl text-center border" style="background: #F9F7F2; border-color: rgba(74, 46, 27, 0.14);">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 p-2 shadow-sm border" style="background: #FFFFFF; border-color: rgba(74, 46, 27, 0.14);">
+            <svg width="512" height="512" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CAFÉ DES ARTS DAKAR Symbol Transparent">
+  <title>CAFÉ DES ARTS DAKAR — Symbol Mark (Transparent)</title>
+  
+    <defs>
+      <linearGradient id="brandGrad_y5itww" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#E5C365"/>
+        <stop offset="50%" stop-color="#C9A84C"/>
+        <stop offset="100%" stop-color="#047857"/>
+      </linearGradient>
+      <linearGradient id="brandGrad_y5itww_accent" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#E5C365"/>
+      </linearGradient>
+      <linearGradient id="brandGrad_y5itww_glow" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#E5C365" stop-opacity="0.2"/>
+      </linearGradient>
+    </defs>
+  
+  <g id="symbol-mark">
+    
+        <path fill="url(#brandGrad_y5itww)" fill-rule="evenodd" d="
+          M 128 34
+          C 132 34, 136 37, 138 41
+          L 220 208
+          C 222 213, 219 220, 213 220
+          L 174 220
+          C 170 220, 166 217, 164 213
+          L 148 174
+          L 108 174
+          L 92 213
+          C 90 217, 86 220, 82 220
+          L 43 220
+          C 37 220, 34 213, 36 208
+          L 118 41
+          C 120 37, 124 34, 128 34
+          Z
+          M 128 92
+          L 140 138
+          L 116 138
+          Z
+        "/>
+        <polygon points="128,34 150,84 106,84" fill="url(#brandGrad_y5itww_accent)"/>
+      
+  </g>
+</svg>
+          </div>
+          <div class="font-extrabold text-sm mb-1" style="color: #1A1A1A;">Café des Arts Dakar</div>
+          <div class="text-[11px] font-mono-custom" style="color: #8C7A70;">Dakar • Corniche</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER OFFICIEL ================= -->
+  <footer class="py-12 px-4 sm:px-8 border-t text-center text-xs font-mono-custom" style="background: rgba(251, 248, 243, 0.95); border-color: rgba(74, 46, 27, 0.14); color: #8C7A70;">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center space-x-3">
+        <span class="font-extrabold text-sm" style="color: #1A1A1A;">Café des Arts Dakar</span>
+        <span>•</span>
+        <span>Almadies Corniche, Dakar</span>
+      </div>
+      <div>
+        Propulsé par <a href="https://wa.me/221778690584" target="_blank" class="font-bold underline" style="color: #4A3728;">Daro TECH</a> Dakar
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= BOUTON FLOTTANT WHATSAPP ================= -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-center group">
+    <a href="https://wa.me/221778690584?text=Bonjour%20Caf%C3%A9%20des%20Arts%20Dakar,%20je%20souhaite%20r%C3%A9server%20ou%20commander." target="_blank" class="mr-3 px-4 py-2.5 rounded-full shadow-2xl text-xs font-bold transition-all duration-300 opacity-95 group-hover:opacity-100 group-hover:scale-105 hidden sm:flex items-center space-x-2.5" style="background: #FFFFFF; border: 1px solid rgba(74, 46, 27, 0.14); color: #1A1A1A;">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span>Réserver sur WhatsApp</span>
+    </a>
+    <a href="https://wa.me/221778690584?text=Bonjour%20Caf%C3%A9%20des%20Arts%20Dakar,%20je%20souhaite%20r%C3%A9server%20ou%20commander." target="_blank" class="relative w-16 h-16 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95" title="WhatsApp" aria-label="WhatsApp">
+      <span class="absolute inset-0 rounded-full bg-emerald-400 opacity-40 animate-ping"></span>
+      <svg class="relative z-10 w-8 h-8 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.031 0C5.396 0 0 5.394 0 12.029c0 2.116.552 4.181 1.6 6L.073 24l6.155-1.503a11.97 11.97 0 005.803 1.5c6.635 0 12.03-5.394 12.03-12.029C24.061 5.394 18.666 0 12.031 0zm0 22.023c-1.848 0-3.664-.496-5.253-1.442l-.377-.225-3.896.953.953-3.8-.247-.393a9.96 9.96 0 01-1.533-5.087c0-5.502 4.478-9.98 9.98-9.98 5.503 0 9.98 4.478 9.98 9.98 0 5.502-4.477 9.98-9.98 9.98zm5.474-7.469c-.3-.15-1.775-.876-2.05-.975-.275-.1-.475-.15-.675.15s-.775.975-.95 1.175c-.175.2-.35.225-.65.075-.3-.15-1.266-.467-2.41-1.488-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.462.132-.612.136-.135.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525s-.675-1.625-.925-2.225c-.244-.583-.492-.504-.675-.513-.175-.008-.375-.01-.575-.01s-.525.075-.8.375c-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.116 3.23 5.127 4.532.716.31 1.275.495 1.71.634.72.228 1.375.196 1.893.118.577-.087 1.775-.725 2.025-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/>
+      </svg>
+    </a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from('.hero-anim', {
+        y: 40,
+        opacity: 0,
+        duration: 1.0,
+        stagger: 0.1,
+        ease: 'power3.out'
+      });
+
+      // Accordéon FAQ
+      document.querySelectorAll('.faq-trigger').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          const answer = item.querySelector('.faq-answer');
+          const icon = item.querySelector('.faq-icon');
+          const isOpen = !answer.classList.contains('hidden');
+
+          document.querySelectorAll('.faq-item').forEach(other => {
+            other.querySelector('.faq-answer').classList.add('hidden');
+            other.querySelector('.faq-icon').textContent = '+';
+          });
+
+          if (!isOpen) {
+            answer.classList.remove('hidden');
+            icon.textContent = '−';
+          }
+        });
+      });
+
+      // 3D Parallax Tilt sur cartes
+      const cards3D = document.querySelectorAll('.card-3d');
+      cards3D.forEach(card => {
+        const glare = card.querySelector('.card-glare');
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = ((y - centerY) / centerY) * -8;
+          const rotateY = ((x - centerX) / centerX) * 8;
+
+          card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+          if (glare) {
+            glare.style.opacity = '1';
+            glare.style.background = `radial-gradient(circle 240px at ${x}px ${y}px, rgba(255,255,255,0.2), transparent 70%)`;
+          }
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+          if (glare) glare.style.opacity = '0';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
